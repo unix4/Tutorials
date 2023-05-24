@@ -7,11 +7,11 @@ include c:\masm\Irvine\Irvine32.inc
 includelib c:\masm\Irvine\Irvine32.lib
 
 .data
-my_name db "Hello World",0 ; zero terminating string
+output db "Hello World",0 ; zero terminating string
 
 .code
 main proc	
-	mov edx, OFFSET my_name
+	mov edx, OFFSET output
 	call WriteString
 	invoke ExitProcess,0
 main endp
